@@ -1,0 +1,39 @@
+The batch file "t.bat" can be used to test the solver in "stand-alone" mode.
+
+The arguments are (as can be seen by invoking "t" with no arguments):
+
+	t {annealSec} {XMLInputFile}        [-t {testCase#}] [-r [{nTimes}] [-v]
+or
+	t {annealSec} -en {ENInputBaseName} [-t {testCase#}] [-r [{nTimes}] [-v]
+
+
+Where
+	{annealSec}
+		Number of seconds for each annealing pass 
+		(there may be as many as 9 passes depending on solver mode)
+
+	{XMLInputFile}
+		XML representation of a CougaarSociety to process.
+		(org.cougaar.scalability.util.CougaarSociety, from scalability_infoether_utilities.jar)
+		This data can be copied from the logfile of a LB run, or created, uh, ex nihilo.
+
+	-en {ENInputBaseName}
+		Use the given set of ExNihilo input files (*.functiondef, *.nodedef, *.linkdef)
+		Probably not useful for Ultralog
+
+	-t {testCase}
+		Which solve mode to use; 1-10 (see SystemDesignTest for modes)
+		Default is 1?
+
+	-r {nTimes}
+		Run the test the indicated number of times.
+		Default if no "-r" is 1; "-r" by itself defaults to 100.
+		Outputs summary results (%success) at end of run.
+
+
+Outputs:
+	SDTestResults.xml: CougaarSociety XML of output solution.
+	loadBalance.JPEG:  Purty picher of before and after state.
+	society_before.*:  "ExNihilo"-type files representing pre-LB state.
+	society_after.*:   guess! (hint: see above)
+

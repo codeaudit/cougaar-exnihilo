@@ -1,0 +1,8 @@
+There is a class for testing ExNihilo-for-Java (not as of this writing compatible with JTest, but Real Soon Now it will be) that can be invoked from a command line (or however else you want). It can be invoked like this:
+
+	java test.org.cougaar.robustness.exnihilo.ENTest {params}
+
+See the Javadocs for ENTest.doTest(String[] args) for the format of the params.
+
+
+ - rob cranfill
