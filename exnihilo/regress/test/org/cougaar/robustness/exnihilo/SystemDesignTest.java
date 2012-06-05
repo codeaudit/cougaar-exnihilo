@@ -757,7 +757,8 @@ doTest(String[] args) {
 				
 //			control.makeTestData(9);
 
-			control.setTitle("Test case #" + testCase + "; anneal time " + annealTime + " seconds",							 300, 16);
+			control.setTitle("Test case #" + testCase + "; anneal time " + annealTime + " seconds",
+							 300, 16);
 
 			// "viz-u-lize it, yeah, yeah...."
 			FileOutputStream f = new FileOutputStream(filename);
